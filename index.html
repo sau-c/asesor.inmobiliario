@@ -1,9 +1,11 @@
 <!DOCTYPE html>
 <html lang="es-MX">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+
+  <!-- Open Graph -->
   <!-- ===== SEO PRIMARY TAGS ===== -->
   <title>Casas en Tizayuca Hidalgo | Andalucía Residencial CESVIN | Saúl Castañeda Asesor</title>
   <meta name="description" content="Compra tu casa en Andalucía Residencial, Tizayuca Hidalgo. Saúl Castañeda, asesor certificado CESVIN. Crédito INFONAVIT, FOVISSSTE y SHF. Prototipos Jeréz, Palma, Palermo y Cartagena desde $1,132,000. Fraccionamiento cerrado con alberca, seguridad 24h y áreas verdes.">
@@ -50,8 +52,8 @@
           "addressRegion": "Hidalgo",
           "addressCountry": "MX"
         },
-        "telephone": "+52-55-3048-1404",
-        "url": "https://sau-c.github.io/asesor.inmobiliario"
+        "telephone": "+52-55-0000-0000",
+        "url": "https://saul-cesvin-tizayuca.com/"
       },
       {
         "@type": "RealEstateAgent",
@@ -66,8 +68,8 @@
             "name": "Hidalgo"
           }
         },
-        "telephone": "+52-55-3048-1404",
-        "url": "https://sau-c.github.io/asesor.inmobiliario"
+        "telephone": "+52-55-0000-0000",
+        "url": "https://saul-cesvin-tizayuca.com/"
       },
       {
         "@type": "Residence",
@@ -78,7 +80,7 @@
           "addressLocality": "Tizayuca",
           "addressRegion": "Hidalgo",
           "addressCountry": "MX",
-          "postalCode": "43825"
+          "postalCode": "43800"
         },
         "geo": {
           "@type": "GeoCoordinates",
@@ -133,1140 +135,942 @@
     ]
   }
   </script>
+  <!-- Fonts -->
 
-  <!-- ===== FONTS ===== -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap" rel="stylesheet">
+
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap" 
+    rel="stylesheet"
+  >
 
   <style>
-    :root {
-      --sand: #F5EFE0;
-      --warm-white: #FDFAF4;
-      --terracotta: #C0613A;
-      --terracotta-dark: #9C4A28;
-      --clay: #E8A87C;
-      --night: #1A1208;
-      --brown-mid: #5C3D2E;
-      --olive: #6B7C4A;
-      --gold: #C9A227;
-      --gold-light: #F0D06A;
-      --text-body: #3D2B1A;
-      --border: rgba(92,61,46,0.15);
+
+    :root{
+      --yellow:#FFCD00;
+      --orange:#EE7907;
+      --dark:#333333;
+      --light:#f8f8f8;
+      --white:#ffffff;
     }
 
-    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
-
-    html { scroll-behavior: smooth; font-size: 16px; }
-
-    body {
-      font-family: 'DM Sans', sans-serif;
-      background: var(--warm-white);
-      color: var(--text-body);
-      overflow-x: hidden;
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
     }
 
-    /* ── TOPBAR ── */
-    .topbar {
-      background: var(--night);
-      color: var(--clay);
-      font-size: 0.78rem;
-      letter-spacing: 0.06em;
-      text-align: center;
-      padding: 8px 20px;
-      font-weight: 500;
+    html{
+      scroll-behavior:smooth;
     }
 
-    /* ── HERO ── */
-    .hero {
-      min-height: 100svh;
-      background: var(--night);
-      position: relative;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      overflow: hidden;
+    body{
+      font-family:'Montserrat',sans-serif;
+      background:var(--white);
+      color:var(--dark);
+      line-height:1.6;
+      overflow-x:hidden;
     }
 
-    .hero::before {
-      content: '';
-      position: absolute;
-      inset: 0;
+    img{
+      max-width:100%;
+      display:block;
+    }
+
+    .container{
+      width:90%;
+      max-width:1200px;
+      margin:auto;
+    }
+
+    section{
+      padding:90px 0;
+    }
+
+    .section-title{
+      text-align:center;
+      font-size:2.8rem;
+      font-weight:800;
+      margin-bottom:18px;
+      color:var(--dark);
+    }
+
+    .section-subtitle{
+      text-align:center;
+      max-width:700px;
+      margin:auto;
+      margin-bottom:55px;
+      color:#666;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      justify-content:center;
+      gap:10px;
+      padding:16px 34px;
+      border-radius:14px;
+      text-decoration:none;
+      font-weight:700;
+      transition:.3s;
+      border:none;
+      cursor:pointer;
+    }
+
+    .btn-primary{
+      background:var(--yellow);
+      color:var(--dark);
+    }
+
+    .btn-primary:hover{
+      background:var(--orange);
+      color:white;
+      transform:translateY(-3px);
+    }
+
+    /* NAVBAR */
+
+    .navbar{
+      position:absolute;
+      width:100%;
+      top:0;
+      left:0;
+      z-index:10;
+      padding:25px 0;
+    }
+
+    .nav-content{
+      display:flex;
+      align-items:center;
+      justify-content:space-between;
+    }
+
+    .logo{
+      color:white;
+      font-weight:800;
+      font-size:1.4rem;
+      text-decoration:none;
+    }
+
+    .logo span{
+      color:var(--yellow);
+    }
+
+    /* HERO */
+
+    .hero{
+      min-height:100vh;
+      display:flex;
+      align-items:center;
+      position:relative;
       background:
-        radial-gradient(ellipse 80% 60% at 30% 60%, rgba(192,97,58,0.18) 0%, transparent 70%),
-        radial-gradient(ellipse 50% 80% at 80% 20%, rgba(201,162,39,0.10) 0%, transparent 60%);
-      pointer-events: none;
+      linear-gradient(rgba(0,0,0,.58),rgba(0,0,0,.58)),
+      url('img/alberca.jpg');
+
+      background-size:cover;
+      background-position:center;
+      color:white;
     }
 
-    /* Geometric pattern */
-    .hero::after {
-      content: '';
-      position: absolute;
-      right: -60px; top: -60px;
-      width: 520px; height: 520px;
-      border: 1px solid rgba(201,162,39,0.12);
-      border-radius: 50%;
-      pointer-events: none;
+    .hero-content{
+      max-width:760px;
     }
 
-    .hero-text {
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      padding: 80px 60px 80px 80px;
-      position: relative;
-      z-index: 2;
+    .hero-badge{
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      background:rgba(255,255,255,.08);
+      border:1px solid rgba(255,255,255,.12);
+      padding:12px 18px;
+      border-radius:100px;
+      margin-bottom:28px;
+      backdrop-filter:blur(10px);
+      font-size:.9rem;
     }
 
-    .hero-eyebrow {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 0.72rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--gold);
-      font-weight: 600;
-      margin-bottom: 28px;
-      opacity: 0;
-      animation: fadeUp 0.8s 0.2s forwards;
+    .hero h1{
+      font-size:4rem;
+      line-height:1;
+      font-weight:800;
+      margin-bottom:28px;
     }
 
-    .hero-eyebrow::before {
-      content: '';
-      display: block;
-      width: 32px; height: 1px;
-      background: var(--gold);
+    .hero h1 span{
+      color:var(--yellow);
     }
 
-    .hero h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2.4rem, 5vw, 4rem);
-      line-height: 1.08;
-      color: var(--sand);
-      font-weight: 900;
-      margin-bottom: 28px;
-      opacity: 0;
-      animation: fadeUp 0.8s 0.4s forwards;
+    .hero p{
+      max-width:650px;
+      font-size:1.15rem;
+      color:#f0f0f0;
+      margin-bottom:38px;
     }
 
-    .hero h1 em {
-      font-style: italic;
-      color: var(--clay);
+    .hero-actions{
+      display:flex;
+      gap:16px;
+      flex-wrap:wrap;
     }
 
-    .hero-sub {
-      font-size: 1.05rem;
-      color: rgba(245,239,224,0.65);
-      line-height: 1.7;
-      max-width: 440px;
-      margin-bottom: 48px;
-      font-weight: 300;
-      opacity: 0;
-      animation: fadeUp 0.8s 0.6s forwards;
+    .btn-outline{
+      border:1px solid rgba(255,255,255,.2);
+      color:white;
+      background:rgba(255,255,255,.05);
+      backdrop-filter:blur(10px);
     }
 
-    .hero-ctas {
-      display: flex;
-      gap: 16px;
-      flex-wrap: wrap;
-      opacity: 0;
-      animation: fadeUp 0.8s 0.8s forwards;
+    .btn-outline:hover{
+      background:white;
+      color:var(--dark);
     }
 
-    .btn-primary {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      background: var(--terracotta);
-      color: #fff;
-      padding: 16px 32px;
-      border-radius: 4px;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.9rem;
-      font-weight: 600;
-      letter-spacing: 0.04em;
-      text-decoration: none;
-      transition: background 0.2s, transform 0.2s, box-shadow 0.2s;
-      box-shadow: 0 4px 20px rgba(192,97,58,0.35);
-    }
-    .btn-primary:hover {
-      background: var(--terracotta-dark);
-      transform: translateY(-2px);
-      box-shadow: 0 8px 30px rgba(192,97,58,0.45);
+    /* STATS */
+
+    .stats{
+      margin-top:-70px;
+      position:relative;
+      z-index:5;
     }
 
-    .btn-outline {
-      display: inline-flex;
-      align-items: center;
-      gap: 8px;
-      border: 1.5px solid rgba(245,239,224,0.3);
-      color: var(--sand);
-      padding: 16px 28px;
-      border-radius: 4px;
-      font-size: 0.9rem;
-      font-weight: 500;
-      text-decoration: none;
-      transition: border-color 0.2s, background 0.2s;
-    }
-    .btn-outline:hover {
-      border-color: var(--clay);
-      background: rgba(232,168,124,0.1);
+    .stats-grid{
+      display:grid;
+      grid-template-columns:repeat(4,1fr);
+      gap:20px;
     }
 
-    .hero-visual {
-      position: relative;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      padding: 60px 60px 60px 20px;
-      z-index: 2;
+    .stat-card{
+      background:white;
+      border-radius:22px;
+      padding:35px;
+      box-shadow:0 10px 30px rgba(0,0,0,.08);
+      text-align:center;
     }
 
-    .card-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 14px;
-      width: 100%;
-      max-width: 440px;
-      opacity: 0;
-      animation: fadeUp 0.8s 1s forwards;
+    .stat-card h3{
+      font-size:2rem;
+      color:var(--orange);
+      margin-bottom:8px;
     }
 
-    .hero-card {
-      background: rgba(245,239,224,0.05);
-      border: 1px solid rgba(245,239,224,0.1);
-      border-radius: 8px;
-      padding: 24px 20px;
-      backdrop-filter: blur(8px);
-      transition: border-color 0.2s, background 0.2s;
-    }
-    .hero-card:hover {
-      border-color: rgba(201,162,39,0.3);
-      background: rgba(201,162,39,0.06);
-    }
-    .hero-card:nth-child(1) { transform: translateY(-12px); }
-    .hero-card:nth-child(4) { transform: translateY(12px); }
-
-    .card-proto {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.3rem;
-      font-weight: 700;
-      color: var(--sand);
-      margin-bottom: 4px;
-    }
-    .card-m2 {
-      font-size: 0.75rem;
-      color: var(--clay);
-      letter-spacing: 0.05em;
-      margin-bottom: 12px;
-      text-transform: uppercase;
-    }
-    .card-price {
-      font-size: 0.88rem;
-      font-weight: 600;
-      color: var(--gold-light);
-    }
-    .card-price span {
-      display: block;
-      font-size: 0.7rem;
-      color: rgba(245,239,224,0.4);
-      font-weight: 400;
-      margin-top: 2px;
+    .stat-card p{
+      color:#666;
+      font-size:.95rem;
     }
 
-    /* ── CREDITO BADGE ── */
-    .credito-strip {
-      background: var(--terracotta);
-      padding: 18px 0;
-      overflow: hidden;
-    }
-    .credito-inner {
-      display: flex;
-      gap: 48px;
-      animation: ticker 18s linear infinite;
-      white-space: nowrap;
-    }
-    .credito-item {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 0.82rem;
-      font-weight: 600;
-      letter-spacing: 0.12em;
-      text-transform: uppercase;
-      color: #fff;
-    }
-    .credito-dot {
-      width: 6px; height: 6px;
-      background: var(--gold-light);
-      border-radius: 50%;
-      flex-shrink: 0;
-    }
-    @keyframes ticker {
-      from { transform: translateX(0); }
-      to { transform: translateX(-50%); }
+    /* MODELOS */
+
+    .models{
+      background:var(--light);
     }
 
-    /* ── SECTIONS ── */
-    section { padding: 100px 0; }
-
-    .container {
-      max-width: 1200px;
-      margin: 0 auto;
-      padding: 0 40px;
+    .grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+      gap:28px;
     }
 
-    .section-label {
-      display: inline-flex;
-      align-items: center;
-      gap: 10px;
-      font-size: 0.72rem;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: var(--terracotta);
-      font-weight: 600;
-      margin-bottom: 20px;
-    }
-    .section-label::before {
-      content: '';
-      display: block;
-      width: 24px; height: 1.5px;
-      background: var(--terracotta);
+    .card{
+      background:white;
+      border-radius:24px;
+      overflow:hidden;
+      transition:.35s;
+      box-shadow:0 10px 30px rgba(0,0,0,.06);
     }
 
-    .section-title {
-      font-family: 'Playfair Display', serif;
-      font-size: clamp(2rem, 3.5vw, 2.8rem);
-      font-weight: 900;
-      color: var(--night);
-      line-height: 1.15;
-      margin-bottom: 20px;
-    }
-    .section-title em { color: var(--terracotta); font-style: italic; }
-
-    .section-body {
-      font-size: 1.05rem;
-      line-height: 1.75;
-      color: rgba(61,43,26,0.7);
-      max-width: 520px;
+    .card:hover{
+      transform:translateY(-8px);
     }
 
-    /* ── AMENIDADES ── */
-    .amenidades { background: var(--sand); }
-
-    .amenidades-grid {
-      display: grid;
-      grid-template-columns: repeat(3, 1fr);
-      gap: 2px;
-      margin-top: 60px;
-      border-radius: 12px;
-      overflow: hidden;
+    .card-image{
+      position:relative;
+      overflow:hidden;
     }
 
-    .amen-item {
-      background: var(--warm-white);
-      padding: 40px 32px;
-      transition: background 0.2s;
-    }
-    .amen-item:hover { background: var(--night); }
-    .amen-item:hover .amen-title { color: var(--sand); }
-    .amen-item:hover .amen-text { color: rgba(245,239,224,0.6); }
-    .amen-item:hover .amen-icon { background: var(--terracotta); color: #fff; }
-
-    .amen-icon {
-      width: 48px; height: 48px;
-      background: var(--sand);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.4rem;
-      margin-bottom: 20px;
-      transition: background 0.2s, color 0.2s;
+    .card img{
+      width:100%;
+      height:260px;
+      object-fit:cover;
+      transition:.4s;
     }
 
-    .amen-title {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.1rem;
-      font-weight: 700;
-      margin-bottom: 8px;
-      color: var(--night);
-      transition: color 0.2s;
+    .card:hover img{
+      transform:scale(1.05);
     }
 
-    .amen-text {
-      font-size: 0.88rem;
-      line-height: 1.6;
-      color: rgba(61,43,26,0.65);
-      transition: color 0.2s;
+    .card-content{
+      padding:26px;
     }
 
-    /* ── PROTOTIPOS ── */
-    .prototipos-grid {
-      display: grid;
-      grid-template-columns: repeat(4, 1fr);
-      gap: 20px;
-      margin-top: 60px;
+    .card-content h3{
+      font-size:1.5rem;
+      margin-bottom:10px;
+      color:var(--dark);
     }
 
-    .proto-card {
-      background: var(--night);
-      border-radius: 10px;
-      overflow: hidden;
-      position: relative;
-      transition: transform 0.25s, box-shadow 0.25s;
-    }
-    .proto-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(26,18,8,0.35); }
-
-    .proto-head {
-      padding: 28px 24px 20px;
-      border-bottom: 1px solid rgba(245,239,224,0.08);
+    .card-content p{
+      color:#666;
+      margin-bottom:20px;
     }
 
-    .proto-name {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.5rem;
-      font-weight: 900;
-      color: var(--sand);
-      margin-bottom: 6px;
-    }
-    .proto-m2 {
-      font-size: 0.78rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--clay);
+    .tag{
+      display:inline-block;
+      padding:8px 14px;
+      border-radius:100px;
+      background:#fff4cc;
+      color:#a66b00;
+      font-size:.85rem;
+      font-weight:600;
     }
 
-    .proto-body { padding: 20px 24px 28px; }
+    /* BENEFITS */
 
-    .proto-stat {
-      display: flex;
-      justify-content: space-between;
-      align-items: baseline;
-      padding: 10px 0;
-      border-bottom: 1px solid rgba(245,239,224,0.06);
-      font-size: 0.84rem;
-    }
-    .proto-stat:last-child { border-bottom: none; }
-    .proto-stat-label { color: rgba(245,239,224,0.45); }
-    .proto-stat-value { color: var(--sand); font-weight: 500; }
-
-    .proto-price-box {
-      margin-top: 20px;
-      padding: 16px;
-      background: rgba(201,162,39,0.1);
-      border: 1px solid rgba(201,162,39,0.2);
-      border-radius: 6px;
-    }
-    .proto-price-label {
-      font-size: 0.7rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--gold);
-      margin-bottom: 4px;
-    }
-    .proto-price-val {
-      font-size: 1.2rem;
-      font-weight: 700;
-      color: var(--gold-light);
+    .benefits-grid{
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(240px,1fr));
+      gap:24px;
     }
 
-    /* ── FINANCIAMIENTO ── */
-    .financiamiento { background: var(--sand); }
-
-    .fi-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      gap: 24px;
-      margin-top: 60px;
+    .benefit{
+      padding:35px;
+      border-radius:22px;
+      background:white;
+      border:1px solid #eee;
+      transition:.3s;
     }
 
-    .fi-card {
-      background: var(--warm-white);
-      border-radius: 10px;
-      padding: 36px 32px;
-      border: 1px solid var(--border);
-      transition: border-color 0.2s, box-shadow 0.2s;
-    }
-    .fi-card:hover {
-      border-color: var(--terracotta);
-      box-shadow: 0 8px 30px rgba(192,97,58,0.1);
+    .benefit:hover{
+      transform:translateY(-5px);
+      border-color:var(--yellow);
     }
 
-    .fi-logo {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.6rem;
-      font-weight: 900;
-      color: var(--terracotta);
-      margin-bottom: 12px;
+    .benefit-icon{
+      width:60px;
+      height:60px;
+      border-radius:18px;
+      background:#fff3bf;
+      display:flex;
+      align-items:center;
+      justify-content:center;
+      margin-bottom:22px;
+      font-size:1.4rem;
     }
 
-    .fi-desc {
-      font-size: 0.88rem;
-      line-height: 1.65;
-      color: rgba(61,43,26,0.65);
-      margin-bottom: 20px;
+    .benefit h3{
+      margin-bottom:12px;
+      font-size:1.2rem;
     }
 
-    .fi-badge {
-      display: inline-block;
-      background: var(--sand);
-      color: var(--brown-mid);
-      font-size: 0.72rem;
-      font-weight: 600;
-      letter-spacing: 0.06em;
-      padding: 5px 12px;
-      border-radius: 100px;
-      margin: 3px 3px 0 0;
+    .benefit p{
+      color:#666;
+      font-size:.96rem;
     }
 
-    /* ── FAQ ── */
-    .faq-list { margin-top: 60px; max-width: 760px; }
+    /* ADVISOR */
 
-    .faq-item {
-      border-top: 1px solid var(--border);
-      padding: 24px 0;
-    }
-    .faq-item:last-child { border-bottom: 1px solid var(--border); }
-
-    .faq-q {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.05rem;
-      font-weight: 700;
-      color: var(--night);
-      margin-bottom: 12px;
-      cursor: pointer;
-      display: flex;
-      justify-content: space-between;
-      gap: 16px;
+    .advisor{
+      background:var(--light);
     }
 
-    .faq-a {
-      font-size: 0.93rem;
-      line-height: 1.75;
-      color: rgba(61,43,26,0.7);
+    .advisor-content{
+      display:grid;
+      grid-template-columns:420px 1fr;
+      gap:60px;
+      align-items:center;
     }
 
-    /* ── CONTACTO ── */
-    .contacto { background: var(--night); }
-
-    .contacto-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 80px;
-      align-items: center;
+    .advisor-image img{
+      width:100%;
+      border-radius:28px;
+      object-fit:cover;
+      box-shadow:0 15px 40px rgba(0,0,0,.12);
     }
 
-    .contacto .section-title { color: var(--sand); }
-    .contacto .section-label { color: var(--clay); }
-    .contacto .section-label::before { background: var(--clay); }
-
-    .contacto-text {
-      font-size: 1.05rem;
-      line-height: 1.75;
-      color: rgba(245,239,224,0.6);
-      margin-bottom: 40px;
+    .advisor-tag{
+      display:inline-block;
+      padding:10px 18px;
+      background:#fff3bf;
+      color:#9a6a00;
+      border-radius:100px;
+      font-size:.9rem;
+      font-weight:700;
+      margin-bottom:20px;
     }
 
-    .contact-items { display: flex; flex-direction: column; gap: 20px; }
-
-    .contact-item {
-      display: flex;
-      align-items: center;
-      gap: 16px;
-      color: var(--sand);
-      text-decoration: none;
-      font-size: 0.95rem;
-      transition: color 0.2s;
-    }
-    .contact-item:hover { color: var(--clay); }
-
-    .contact-icon {
-      width: 44px; height: 44px;
-      background: rgba(245,239,224,0.07);
-      border-radius: 8px;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 1.2rem;
-      flex-shrink: 0;
+    .advisor-text h2{
+      font-size:3rem;
+      margin-bottom:22px;
+      line-height:1.1;
     }
 
-    .form-box {
-      background: rgba(245,239,224,0.05);
-      border: 1px solid rgba(245,239,224,0.1);
-      border-radius: 12px;
-      padding: 40px;
-      backdrop-filter: blur(10px);
+    .advisor-text p{
+      color:#666;
+      margin-bottom:18px;
+      max-width:650px;
     }
 
-    .form-box h3 {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.3rem;
-      color: var(--sand);
-      margin-bottom: 8px;
-    }
-    .form-box p {
-      font-size: 0.85rem;
-      color: rgba(245,239,224,0.45);
-      margin-bottom: 28px;
+    .advisor-features{
+      display:flex;
+      flex-wrap:wrap;
+      gap:14px;
+      margin:30px 0;
     }
 
-    .form-group { margin-bottom: 18px; }
-
-    .form-group label {
-      display: block;
-      font-size: 0.78rem;
-      letter-spacing: 0.08em;
-      text-transform: uppercase;
-      color: rgba(245,239,224,0.5);
-      margin-bottom: 8px;
+    .advisor-feature{
+      background:white;
+      padding:12px 18px;
+      border-radius:14px;
+      border:1px solid #eee;
+      font-size:.95rem;
+      font-weight:600;
     }
 
-    .form-group input,
-    .form-group select,
-    .form-group textarea {
-      width: 100%;
-      background: rgba(245,239,224,0.07);
-      border: 1px solid rgba(245,239,224,0.12);
-      border-radius: 6px;
-      padding: 12px 16px;
-      color: var(--sand);
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.92rem;
-      outline: none;
-      transition: border-color 0.2s;
-    }
-    .form-group input:focus,
-    .form-group select:focus,
-    .form-group textarea:focus {
-      border-color: var(--clay);
-    }
-    .form-group select option { background: var(--night); }
+    /* RESPONSIVE */
 
-    .btn-submit {
-      width: 100%;
-      background: var(--terracotta);
-      color: #fff;
-      border: none;
-      border-radius: 6px;
-      padding: 16px;
-      font-family: 'DM Sans', sans-serif;
-      font-size: 0.95rem;
-      font-weight: 600;
-      cursor: pointer;
-      transition: background 0.2s, transform 0.2s;
-    }
-    .btn-submit:hover {
-      background: var(--terracotta-dark);
-      transform: translateY(-1px);
+    @media(max-width:992px){
+
+      .advisor-content{
+        grid-template-columns:1fr;
+        gap:40px;
+      }
+
     }
 
-    /* ── FOOTER ── */
-    footer {
-      background: #0D0A04;
-      padding: 40px 0;
-      border-top: 1px solid rgba(245,239,224,0.07);
-    }
-    .footer-inner {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      gap: 20px;
-      flex-wrap: wrap;
-    }
-    .footer-brand {
-      font-family: 'Playfair Display', serif;
-      font-size: 1.1rem;
-      color: var(--sand);
-      font-weight: 700;
-    }
-    .footer-brand span { color: var(--clay); }
-    .footer-text {
-      font-size: 0.8rem;
-      color: rgba(245,239,224,0.35);
-      text-align: center;
-    }
-    .footer-links { display: flex; gap: 24px; }
-    .footer-links a {
-      font-size: 0.82rem;
-      color: rgba(245,239,224,0.45);
-      text-decoration: none;
-      transition: color 0.2s;
-    }
-    .footer-links a:hover { color: var(--clay); }
+    @media(max-width:768px){
 
-    /* ── WHATSAPP FLOAT ── */
-    .wa-float {
-      position: fixed;
-      bottom: 28px;
-      right: 28px;
-      z-index: 999;
-      width: 60px; height: 60px;
-      background: #25D366;
-      border-radius: 50%;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      box-shadow: 0 6px 24px rgba(37,211,102,0.4);
-      text-decoration: none;
-      font-size: 1.7rem;
-      transition: transform 0.2s, box-shadow 0.2s;
-    }
-    .wa-float:hover {
-      transform: scale(1.1);
-      box-shadow: 0 10px 32px rgba(37,211,102,0.55);
+      .advisor{
+        text-align:center;
+      }
+
+      .advisor-text h2{
+        font-size:2.2rem;
+      }
+
+      .advisor-features{
+        justify-content:center;
+      }
+
     }
 
-    /* ── ANIMATIONS ── */
-    @keyframes fadeUp {
-      from { opacity: 0; transform: translateY(24px); }
-      to { opacity: 1; transform: translateY(0); }
+    /* CTA */
+
+    /* .cta{
+      background:
+      linear-gradient(rgba(0,0,0,.72),rgba(0,0,0,.72)),
+      url('img/cta-bg.jpg');
+
+      background-size:cover;
+      background-position:center;
+      color:white;
+      text-align:center;
     }
 
-    /* ── RESPONSIVE ── */
-    @media (max-width: 900px) {
-      .hero { grid-template-columns: 1fr; min-height: auto; }
-      .hero-visual { display: none; }
-      .hero-text { padding: 80px 28px; }
-      .prototipos-grid { grid-template-columns: repeat(2, 1fr); }
-      .amenidades-grid { grid-template-columns: 1fr 1fr; }
-      .fi-grid { grid-template-columns: 1fr; }
-      .contacto-grid { grid-template-columns: 1fr; gap: 40px; }
-      .container { padding: 0 24px; }
+    .cta h2{
+      font-size:3.2rem;
+      margin-bottom:18px;
+      color:var(--yellow);
     }
 
-    @media (max-width: 600px) {
-      .prototipos-grid { grid-template-columns: 1fr; }
-      .amenidades-grid { grid-template-columns: 1fr; }
-      section { padding: 70px 0; }
+    .cta p{
+      max-width:700px;
+      margin:auto;
+      margin-bottom:40px;
+      color:#ddd;
     }
+
+    .contact-box{
+      max-width:600px;
+      margin:auto;
+      background:white;
+      padding:35px;
+      border-radius:24px;
+      box-shadow:0 15px 40px rgba(0,0,0,.2);
+    }
+
+    .form-group{
+      margin-bottom:18px;
+    }
+
+    input,
+    textarea{
+      width:100%;
+      padding:16px;
+      border-radius:14px;
+      border:1px solid #ddd;
+      font-family:inherit;
+      font-size:1rem;
+      outline:none;
+      transition:.3s;
+    }
+
+    input:focus,
+    textarea:focus{
+      border-color:var(--yellow);
+    }
+
+    textarea{
+      resize:none;
+    }
+
+    .contact-box button{
+      width:100%;
+      font-size:1rem;
+    } */
+
+    /* FOOTER */
+
+    footer{
+      background:#111;
+      color:#999;
+      text-align:center;
+      padding:35px 20px;
+      font-size:.92rem;
+    }
+
+    /* RESPONSIVE */
+
+    @media(max-width:992px){
+
+      .hero h1{
+        font-size:3.7rem;
+      }
+
+      .stats-grid{
+        grid-template-columns:repeat(2,1fr);
+      }
+
+    }
+
+    @media(max-width:768px){
+
+      section{
+        padding:70px 0;
+      }
+
+      .nav-content{
+        justify-content:center;
+      }
+
+      .hero{
+        text-align:center;
+      }
+
+      .hero-content{
+        margin:auto;
+      }
+
+      .hero h1{
+        font-size:2.8rem;
+      }
+
+      .hero p{
+        font-size:1rem;
+      }
+
+      .hero-actions{
+        justify-content:center;
+      }
+
+      .section-title{
+        font-size:2.1rem;
+      }
+
+      .cta h2{
+        font-size:2.2rem;
+      }
+
+      .stats-grid{
+        grid-template-columns:1fr;
+      }
+
+    }
+
   </style>
+
 </head>
 
 <body>
 
-  <!-- Accesibilidad -->
-  <a href="#main" style="position:absolute;left:-9999px;top:0" onfocus="this.style.left='0'">Saltar al contenido</a>
+  <!-- NAVBAR -->
 
-  <div class="topbar">
-    📍 Andalucía Residencial · Tizayuca, Hidalgo &nbsp;|&nbsp; Asesor: Saúl Castañeda &nbsp;|&nbsp; INFONAVIT · FOVISSSTE · SHF
-  </div>
+  <nav class="navbar">
 
-  <!-- ═══ HERO ═══ -->
-  <header class="hero" role="banner">
-    <div class="hero-text">
-      <span class="hero-eyebrow">Casas en venta · Tizayuca, Hidalgo</span>
-      <h1>Tu casa en<br><em>Andalucía</em><br>Residencial</h1>
-      <p class="hero-sub">
-        Fraccionamiento cerrado con alberca, seguridad 24h y áreas verdes en Tizayuca, Hidalgo. Crédito INFONAVIT, FOVISSSTE y SHF. Asesoría personalizada y sin costo.
-      </p>
-      <div class="hero-ctas">
-        <a href="https://wa.me/525530481404?text=Hola%20Saúl,%20me%20interesa%20conocer%20las%20casas%20en%20Andalucía%20Residencial" class="btn-primary" rel="noopener" target="_blank">
-          💬 Hablar con Saúl
-        </a>
-        <a href="#prototipos" class="btn-outline">Ver prototipos →</a>
-      </div>
+    <div class="container nav-content">
+
+      <a href="#" class="logo">
+        SAÚL <span>CASTAÑEDA</span>
+        
+        <div class="hero-badge">
+          🏡 CASAS EN TIZAYUCA HIDALGO
+        </div>
+      </a>
+
     </div>
 
-    <div class="hero-visual" aria-hidden="true">
-      <div class="card-grid">
-        <div class="hero-card">
-          <div class="card-proto">Jeréz</div>
-          <div class="card-m2">58.30 m²</div>
-          <div class="card-price">$1,132,000<span>con INFONAVIT</span></div>
+  </nav>
+
+  <!-- HERO -->
+
+  <header class="hero">
+
+    <div class="container">
+
+      <div class="hero-content">
+        <h1>
+          VIVE EN <span>ANDALUCÍA</span><br>
+          RESIDENCIAL
+        </h1>
+
+        <p>
+          Casas residenciales con alberca, vigilanciayy, áreas verdes y opciones de crédito INFONAVIT, FOVISSSTE y bancario.
+        </p>
+
+        <div class="hero-actions">
+
+          <a href="https://wa.me/525500000000" class="btn btn-primary">
+            AGENDAR VISITA
+          </a>
+
+          <a href="#modelos" class="btn btn-outline">
+            VER MODELOS
+          </a>
+
         </div>
-        <div class="hero-card">
-          <div class="card-proto">Palma</div>
-          <div class="card-m2">69.37 m²</div>
-          <div class="card-price">$1,344,000<span>con INFONAVIT</span></div>
-        </div>
-        <div class="hero-card">
-          <div class="card-proto">Palermo</div>
-          <div class="card-m2">78.65 m²</div>
-          <div class="card-price">$1,521,000<span>con INFONAVIT</span></div>
-        </div>
-        <div class="hero-card">
-          <div class="card-proto">Cartagena</div>
-          <div class="card-m2">97.59 m²</div>
-          <div class="card-price">$1,844,000<span>con INFONAVIT</span></div>
-        </div>
+
       </div>
+
     </div>
+
   </header>
 
-  <!-- CREDITO TICKER -->
-  <div class="credito-strip" aria-hidden="true">
-    <div class="credito-inner">
-      <span class="credito-item"><span class="credito-dot"></span>INFONAVIT Tradicional</span>
-      <span class="credito-item"><span class="credito-dot"></span>FOVISSSTE Tradicional</span>
-      <span class="credito-item"><span class="credito-dot"></span>FOVISSSTE Especial</span>
-      <span class="credito-item"><span class="credito-dot"></span>SHF Hipotecario</span>
-      <span class="credito-item"><span class="credito-dot"></span>Cofinavit</span>
-      <span class="credito-item"><span class="credito-dot"></span>Crédito Conyugal</span>
-      <span class="credito-item"><span class="credito-dot"></span>Corresidencial</span>
-      <span class="credito-item"><span class="credito-dot"></span>Pago de Contado</span>
-      <!-- duplicate for seamless loop -->
-      <span class="credito-item"><span class="credito-dot"></span>INFONAVIT Tradicional</span>
-      <span class="credito-item"><span class="credito-dot"></span>FOVISSSTE Tradicional</span>
-      <span class="credito-item"><span class="credito-dot"></span>FOVISSSTE Especial</span>
-      <span class="credito-item"><span class="credito-dot"></span>SHF Hipotecario</span>
-      <span class="credito-item"><span class="credito-dot"></span>Cofinavit</span>
-      <span class="credito-item"><span class="credito-dot"></span>Crédito Conyugal</span>
-      <span class="credito-item"><span class="credito-dot"></span>Corresidencial</span>
-      <span class="credito-item"><span class="credito-dot"></span>Pago de Contado</span>
-    </div>
-  </div>
+  <!-- STATS -->
 
-  <main id="main">
+  <section class="stats">
 
-    <!-- ═══ AMENIDADES ═══ -->
-    <section class="amenidades" aria-labelledby="amen-titulo">
-      <div class="container">
-        <span class="section-label">El fraccionamiento</span>
-        <h2 class="section-title" id="amen-titulo">Todo lo que <em>necesitas</em><br>en un solo lugar</h2>
-        <p class="section-body">Andalucía Residencial es un fraccionamiento cerrado en Tizayuca, Hidalgo, diseñado para que tu familia viva con la comodidad, seguridad y espacios que merece.</p>
-
-        <div class="amenidades-grid">
-          <div class="amen-item">
-            <div class="amen-icon">🔐</div>
-            <div class="amen-title">Seguridad 24/7</div>
-            <p class="amen-text">Acceso controlado con doble filtro de entrada para proteger a tu familia las 24 horas del día.</p>
-          </div>
-          <div class="amen-item">
-            <div class="amen-icon">🏊</div>
-            <div class="amen-title">Alberca</div>
-            <p class="amen-text">Área de alberca para uso exclusivo de los residentes, ideal para convivir y disfrutar con la familia.</p>
-          </div>
-          <div class="amen-item">
-            <div class="amen-icon">🐾</div>
-            <div class="amen-title">Pet Park</div>
-            <p class="amen-text">Parque exclusivo para mascotas dentro del fraccionamiento, porque tu familia incluye a todos.</p>
-          </div>
-          <div class="amen-item">
-            <div class="amen-icon">🌿</div>
-            <div class="amen-title">Áreas verdes</div>
-            <p class="amen-text">Jardines y parques bien cuidados para el esparcimiento y la convivencia de todas las edades.</p>
-          </div>
-          <div class="amen-item">
-            <div class="amen-icon">💧</div>
-            <div class="amen-title">Sustentabilidad</div>
-            <p class="amen-text">Pozo propio de agua, planta tratadora y tanques tormenta para una gestión hídrica responsable.</p>
-          </div>
-          <div class="amen-item">
-            <div class="amen-icon">🛣️</div>
-            <div class="amen-title">Ubicación ideal</div>
-            <p class="amen-text">En Tizayuca, Hidalgo, con acceso directo a vías principales y boulevard exclusivo del fraccionamiento.</p>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ PROTOTIPOS ═══ -->
-    <section id="prototipos" aria-labelledby="proto-titulo">
-      <div class="container">
-        <span class="section-label">Modelos de vivienda</span>
-        <h2 class="section-title" id="proto-titulo">4 prototipos para <em>elegir</em><br>el hogar ideal</h2>
-        <p class="section-body">Todos los modelos cuentan con sistema constructivo de alta calidad, instalación hidráulica PP-R y acabados de primera.</p>
-
-        <div class="prototipos-grid">
-
-          <!-- JEREZ -->
-          <article class="proto-card" itemscope itemtype="https://schema.org/Accommodation">
-            <meta itemprop="name" content="Casa Jeréz – Andalucía Residencial Tizayuca">
-            <meta itemprop="floorSize" content="58.30 m²">
-            <div class="proto-head">
-              <div class="proto-name">Jeréz</div>
-              <div class="proto-m2">58.30 m² construidos</div>
-            </div>
-            <div class="proto-body">
-              <div class="proto-stat"><span class="proto-stat-label">Lote</span><span class="proto-stat-value">4.50 × 15.00 m</span></div>
-              <div class="proto-stat"><span class="proto-stat-label">Estacionamiento</span><span class="proto-stat-value">4.17 m</span></div>
-              <div class="proto-stat"><span class="proto-stat-label">Planta baja</span><span class="proto-stat-value">2.31 m altura</span></div>
-              <div class="proto-stat"><span class="proto-stat-label">Crédito</span><span class="proto-stat-value">INFONAVIT · FOVI · SHF</span></div>
-              <div class="proto-price-box">
-                <div class="proto-price-label">Precio con INFONAVIT / FOVISSSTE</div>
-                <div class="proto-price-val" itemprop="offers" itemscope itemtype="https://schema.org/Offer">
-                  <meta itemprop="price" content="1132000">
-                  <meta itemprop="priceCurrency" content="MXN">
-                  $1,132,000
-                </div>
-              </div>
-            </div>
-          </article>
-
-          <!-- PALMA -->
-          <article class="proto-card" itemscope itemtype="https://schema.org/Accommodation">
-            <meta itemprop="name" content="Casa Palma – Andalucía Residencial Tizayuca">
-            <meta itemprop="floorSize" content="69.37 m²">
-            <div class="proto-head">
-              <div class="proto-name">Palma</div>
-              <div class="proto-m2">69.37 m² construidos</div>
-            </div>
-            <div class="proto-body">
-              <div class="proto-stat"><span class="proto-stat-label">Lote</span><span class="proto-stat-value">4.50 × 15.00 m</span></div>
-              <div class="proto-stat"><span class="proto-stat-label">Estacionamiento</span><span class="proto-stat-value">6.00 m</span></div>
-              <div class="proto-stat"><span class="proto-stat-label">Planta baja</span><span class="proto-stat-value">2.31 m altura</span></div>
-              <div class="proto-stat"><span class="proto-stat-label">Crédito</span><span class="proto-stat-value">INFONAVIT · FOVI · SHF</span></div>
-              <div class="proto-price-box">
-                <div class="proto-price-label">Precio con INFONAVIT / FOVISSSTE</div>
-                <div class="proto-price-val">$1,344,000</div>
-              </div>
-            </div>
-          </article>
-
-          <!-- PALERMO -->
-          <article class="proto-card" itemscope itemtype="https://schema.org/Accommodation">
-            <meta itemprop="name" content="Casa Palermo – Andalucía Residencial Tizayuca">
-            <meta itemprop="floorSize" content="78.65 m²">
-            <div class="proto-head">
-              <div class="proto-name">Palermo</div>
-              <div class="proto-m2">78.65 m² construidos</div>
-            </div>
-            <div class="proto-body">
-              <div class="proto-stat"><span class="proto-stat-label">Lote</span><span class="proto-stat-value">6.00 × 15.00 m</span></div>
-              <div class="proto-stat"><span class="proto-stat-label">Estacionamiento</span><span class="proto-stat-value">5.50 m</span></div>
-              <div class="proto-stat"><span class="proto-stat-label">Planta baja</span><span class="proto-stat-value">2.52 m altura</span></div>
-              <div class="proto-stat"><span class="proto-stat-label">Crédito</span><span class="proto-stat-value">INFONAVIT · FOVI · SHF</span></div>
-              <div class="proto-price-box">
-                <div class="proto-price-label">Precio con INFONAVIT / FOVISSSTE</div>
-                <div class="proto-price-val">$1,521,000</div>
-              </div>
-            </div>
-          </article>
-
-          <!-- CARTAGENA -->
-          <article class="proto-card" itemscope itemtype="https://schema.org/Accommodation">
-            <meta itemprop="name" content="Casa Cartagena – Andalucía Residencial Tizayuca">
-            <meta itemprop="floorSize" content="97.59 m²">
-            <div class="proto-head">
-              <div class="proto-name">Cartagena</div>
-              <div class="proto-m2">97.59 m² construidos</div>
-            </div>
-            <div class="proto-body">
-              <div class="proto-stat"><span class="proto-stat-label">Lote</span><span class="proto-stat-value">6.00 × 15.00 m</span></div>
-              <div class="proto-stat"><span class="proto-stat-label">Estacionamiento</span><span class="proto-stat-value">5.50 m</span></div>
-              <div class="proto-stat"><span class="proto-stat-label">Planta baja</span><span class="proto-stat-value">2.52 m altura</span></div>
-              <div class="proto-stat"><span class="proto-stat-label">Crédito</span><span class="proto-stat-value">INFONAVIT · FOVI · SHF</span></div>
-              <div class="proto-price-box">
-                <div class="proto-price-label">Precio con INFONAVIT / FOVISSSTE</div>
-                <div class="proto-price-val">$1,844,000</div>
-              </div>
-            </div>
-          </article>
-
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ FINANCIAMIENTO ═══ -->
-    <section class="financiamiento" aria-labelledby="fi-titulo">
-      <div class="container">
-        <span class="section-label">Opciones de crédito</span>
-        <h2 class="section-title" id="fi-titulo">Tu crédito, <em>tu elección</em></h2>
-        <p class="section-body">Trabajamos con las principales instituciones hipotecarias de México para que encuentres el esquema que mejor se ajuste a tu situación.</p>
-
-        <div class="fi-grid">
-          <div class="fi-card">
-            <div class="fi-logo">INFONAVIT</div>
-            <p class="fi-desc">El crédito más utilizado en México. Con mínimo 1,080 puntos puedes adquirir tu vivienda. Plazos de hasta 30 años.</p>
-            <span class="fi-badge">Tradicional</span>
-            <span class="fi-badge">Conyugal</span>
-            <span class="fi-badge">Cofinavit</span>
-            <span class="fi-badge">Corresidencial</span>
-            <span class="fi-badge">Unamos créditos</span>
-          </div>
-          <div class="fi-card">
-            <div class="fi-logo">FOVISSSTE</div>
-            <p class="fi-desc">Para trabajadores al servicio del Estado. Requiere 9 bimestres cotizados. CESVIN cubre el 50% de gastos notariales.</p>
-            <span class="fi-badge">Tradicional</span>
-            <span class="fi-badge">Pensiona2</span>
-            <span class="fi-badge">Crédito Especial</span>
-            <span class="fi-badge">Conyugal</span>
-            <span class="fi-badge">2do crédito</span>
-          </div>
-          <div class="fi-card">
-            <div class="fi-logo">SHF / Banco</div>
-            <p class="fi-desc">Crédito hipotecario bancario a través de la Sociedad Hipotecaria Federal. Aforo máximo 90%. Plazos hasta 20 años.</p>
-            <span class="fi-badge">Hipotecario puro</span>
-            <span class="fi-badge">Cuenta bancaria</span>
-            <span class="fi-badge">Aforo 90%</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ FAQ ═══ -->
-    <section aria-labelledby="faq-titulo">
-      <div class="container">
-        <span class="section-label">Preguntas frecuentes</span>
-        <h2 class="section-title" id="faq-titulo">Resolvemos tus <em>dudas</em></h2>
-
-        <div class="faq-list">
-          <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-            <div class="faq-q" itemprop="name">¿Cuánto cuesta una casa en Andalucía Residencial Tizayuca?</div>
-            <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <p itemprop="text">Los precios inician desde <strong>$1,132,000 pesos</strong> para el prototipo Jeréz (58 m²). El Palma cuesta $1,344,000, el Palermo $1,521,000 y el Cartagena (97 m²) $1,844,000. Todos aplican con crédito INFONAVIT o FOVISSSTE Tradicional. Existen promociones vigentes. Contáctame para precios actualizados.</p>
-            </div>
-          </div>
-
-          <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-            <div class="faq-q" itemprop="name">¿Puedo comprar con INFONAVIT en Tizayuca?</div>
-            <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <p itemprop="text">Sí. Andalucía Residencial acepta crédito INFONAVIT Tradicional, Conyugal, Cofinavit, Corresidencial y más. Necesitas un mínimo de <strong>1,080 puntos</strong>. Te ayudo a verificar tu precalificación sin costo.</p>
-            </div>
-          </div>
-
-          <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-            <div class="faq-q" itemprop="name">¿Dónde está ubicado Andalucía Residencial?</div>
-            <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <p itemprop="text">Está en <strong>Tizayuca, Hidalgo</strong>, con acceso directo a vías principales y boulevard exclusivo. Es una ubicación estratégica con conexión rápida a la Ciudad de México y zona metropolitana.</p>
-            </div>
-          </div>
-
-          <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-            <div class="faq-q" itemprop="name">¿Cuánto tiempo tarda la entrega de mi casa?</div>
-            <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <p itemprop="text">La entrega se realiza en un plazo de <strong>30 a 45 días hábiles</strong> después de la firma de escritura. Durante ese tiempo, el área de postventa te da seguimiento semanal.</p>
-            </div>
-          </div>
-
-          <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-            <div class="faq-q" itemprop="name">¿Qué garantías tiene mi vivienda?</div>
-            <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <p itemprop="text">Tu vivienda cuenta con garantía de acabados desde el día de entrega, <strong>1 año</strong> por vicios ocultos en instalaciones, <strong>5 años</strong> de impermeabilización y <strong>5 años</strong> por defectos estructurales.</p>
-            </div>
-          </div>
-
-          <div class="faq-item" itemscope itemprop="mainEntity" itemtype="https://schema.org/Question">
-            <div class="faq-q" itemprop="name">¿Qué necesito para apartar una casa?</div>
-            <div class="faq-a" itemscope itemprop="acceptedAnswer" itemtype="https://schema.org/Answer">
-              <p itemprop="text">Necesitas precalificación vigente de tu crédito, INE oficial y el pago del apartado (aceptamos efectivo, tarjeta o transferencia). Cuéntame tu caso y te guío en cada paso sin costo.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- ═══ CONTACTO ═══ -->
-    <section id="contacto" class="contacto" aria-labelledby="contact-titulo">
-      <div class="container">
-        <div class="contacto-grid">
-          <div>
-            <span class="section-label">Asesoría gratuita</span>
-            <h2 class="section-title" id="contact-titulo">Habla directo con<br><em>Saúl Castañeda</em></h2>
-            <p class="contacto-text">Soy asesor inmobiliario certificado de CESVIN en Andalucía Residencial, Tizayuca. Te acompaño desde la primera visita hasta la entrega de las llaves, sin costo adicional.</p>
-
-            <div class="contact-items">
-              <a href="https://wa.me/525530481404?text=Hola%20Saúl,%20me%20interesa%20una%20casa%20en%20Andalucía%20Residencial%20Tizayuca" class="contact-item" target="_blank" rel="noopener">
-                <span class="contact-icon">💬</span>
-                <span>WhatsApp: <strong>Saúl Castañeda</strong><br><small style="opacity:0.5">Respuesta inmediata · sin compromiso</small></span>
-              </a>
-              <a href="tel:525530481404" class="contact-item">
-                <span class="contact-icon">📞</span>
-                <span>Llamar al asesor<br><small style="opacity:0.5">Lunes a Sábado · 9:00–18:00 h</small></span>
-              </a>
-              <div class="contact-item">
-                <span class="contact-icon">📍</span>
-                <span>Andalucía Residencial<br><small style="opacity:0.5">Tizayuca, Hidalgo, México</small></span>
-              </div>
-            </div>
-          </div>
-
-          <div class="form-box">
-            <h3>¿Te interesa algún modelo?</h3>
-            <p>Déjame tus datos y me comunico contigo hoy mismo.</p>
-
-            <div class="form-group">
-              <label for="nombre">Nombre completo</label>
-              <input type="text" id="nombre" name="nombre" placeholder="Tu nombre" autocomplete="name">
-            </div>
-            <div class="form-group">
-              <label for="telefono">Teléfono / WhatsApp</label>
-              <input type="tel" id="telefono" name="telefono" placeholder="55 0000 0000" autocomplete="tel">
-            </div>
-            <div class="form-group">
-              <label for="credito">Tipo de crédito</label>
-              <select id="credito" name="credito">
-                <option value="">Selecciona una opción</option>
-                <option>INFONAVIT</option>
-                <option>FOVISSSTE</option>
-                <option>SHF / Bancario</option>
-                <option>Contado</option>
-                <option>No lo sé aún</option>
-              </select>
-            </div>
-            <div class="form-group">
-              <label for="prototipo">Modelo de interés</label>
-              <select id="prototipo" name="prototipo">
-                <option value="">Todos los modelos</option>
-                <option>Jeréz – 58 m²</option>
-                <option>Palma – 69 m²</option>
-                <option>Palermo – 78 m²</option>
-                <option>Cartagena – 97 m²</option>
-              </select>
-            </div>
-            <button class="btn-submit" onclick="enviarWA()">📲 Solicitar asesoría gratuita</button>
-          </div>
-        </div>
-      </div>
-    </section>
-
-  </main>
-
-  <!-- ═══ FOOTER ═══ -->
-  <footer>
     <div class="container">
-      <div class="footer-inner">
-        <div class="footer-brand">Saúl Castañeda &nbsp;<span>· CESVIN</span></div>
-        <p class="footer-text">Asesor Inmobiliario Independiente · Andalucía Residencial · Tizayuca, Hidalgo<br>
-          Casas en venta con INFONAVIT, FOVISSSTE y SHF en Tizayuca Hidalgo</p>
-        <div class="footer-links">
-          <a href="#prototipos">Prototipos</a>
-          <a href="#contacto">Contacto</a>
-          <a href="https://wa.me/525530481404" target="_blank" rel="noopener">WhatsApp</a>
+
+      <div class="stats-grid">
+
+        <div class="stat-card">
+          <h3>+5000</h3>
+          <p>Familias viviendo aquí</p>
         </div>
+
+        <div class="stat-card">
+          <h3>4</h3>
+          <p>Modelos disponibles</p>
+        </div>
+
+        <div class="stat-card">
+          <h3>24/7</h3>
+          <p>Doble vigilancia</p>
+        </div>
+
+        <div class="stat-card">
+          <h3>100%</h3>
+          <p>Asesoría personalizada</p>
+        </div>
+
       </div>
+
     </div>
+
+  </section>
+
+  <!-- MODELOS -->
+
+  <section class="models" id="modelos">
+
+    <div class="container">
+
+      <h2 class="section-title">
+        Modelos Disponibles
+      </h2>
+
+      <p class="section-subtitle">
+        Encuentra la casa ideal para ti y tu familia dentro de Andalucía Residencial.
+      </p>
+
+      <div class="grid">
+
+        <div class="card">
+
+          <div class="card-image">
+            <img src="img/jerez.jpg" alt="Modelo Jerez">
+          </div>
+
+          <div class="card-content">
+
+            <span class="tag">
+              Crédito INFONAVIT
+            </span>
+
+            <h3>Jeréz</h3>
+
+            <p>
+              Excelente opción para comenzar tu patrimonio.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="card">
+
+          <div class="card-image">
+            <img src="img/palma.jpg" alt="Modelo Palma">
+          </div>
+
+          <div class="card-content">
+
+            <span class="tag">
+              Diseño moderno
+            </span>
+
+            <h3>Palma</h3>
+
+            <p>
+              Espacios funcionales y distribución inteligente.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="card">
+
+          <div class="card-image">
+            <img src="img/palermo.jpg" alt="Modelo Palermo">
+          </div>
+
+          <div class="card-content">
+
+            <span class="tag">
+              Mayor amplitud
+            </span>
+
+            <h3>Palermo</h3>
+
+            <p>
+              Ideal para quienes buscan más comodidad.
+            </p>
+
+          </div>
+
+        </div>
+
+        <div class="card">
+
+          <div class="card-image">
+            <img src="img/cartagena.jpg" alt="Modelo Cartagena">
+          </div>
+
+          <div class="card-content">
+
+            <span class="tag">
+              Modelo premium
+            </span>
+
+            <h3>Cartagena</h3>
+
+            <p>
+              El modelo más amplio y exclusivo del desarrollo.
+            </p>
+
+          </div>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- BENEFICIOS -->
+
+  <section>
+
+    <div class="container">
+
+      <h2 class="section-title">
+        ¿Por qué elegir Andalucía?
+      </h2>
+
+      <p class="section-subtitle">
+        Un desarrollo pensado para brindarte vigilancia, comodidad y calidad de vida.
+      </p>
+
+      <div class="benefits-grid">
+
+        <div class="benefit">
+
+          <div class="benefit-icon">
+            🔒
+          </div>
+
+          <h3>Doble vigilancia</h3>
+
+          <p>
+            Acceso controlado y ambiente familiar.
+          </p>
+
+        </div>
+
+        <div class="benefit">
+
+          <div class="benefit-icon">
+            🏊
+          </div>
+
+          <h3>Amenidades</h3>
+
+          <p>
+            Alberca, jardines y áreas recreativas.
+          </p>
+
+        </div>
+
+        <div class="benefit">
+
+          <div class="benefit-icon">
+            📍
+          </div>
+
+          <h3>Ubicación estratégica</h3>
+
+          <p>
+            Rápido acceso desde CDMX y zona metropolitana.
+          </p>
+
+        </div>
+
+        <div class="benefit">
+
+          <div class="benefit-icon">
+            💳
+          </div>
+
+          <h3>Opciones de crédito</h3>
+
+          <p>
+            INFONAVIT, FOVISSSTE, bancario y contado.
+          </p>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- SOBRE MI -->
+
+  <section class="advisor">
+
+    <div class="container">
+
+      <div class="advisor-content">
+
+        <div class="advisor-image">
+          <img src="img/saul.jpg" alt="Saúl Castañeda asesor inmobiliario">
+        </div>
+
+        <div class="advisor-text">
+
+          <span class="advisor-tag">
+            TU ASESOR INMOBILIARIO
+          </span>
+
+          <h2>
+            Saúl Castañeda
+          </h2>
+
+          <p>
+            Soy asesor inmobiliario especializado en Andalucía Residencial y mi objetivo es ayudarte a encontrar la mejor opción para ti y tu familia.
+          </p>
+
+          <p>
+            Te acompaño durante todo el proceso de compra, desde la elección del modelo ideal hasta la integración de tu expediente y aprobación de crédito.
+          </p>
+
+          <div class="advisor-features">
+
+            <div class="advisor-feature">
+              ✔ Atención personalizada
+            </div>
+
+            <div class="advisor-feature">
+              ✔ Asesoría en créditos
+            </div>
+
+            <div class="advisor-feature">
+              ✔ Acompañamiento completo
+            </div>
+
+          </div>
+
+          <a href="https://wa.me/525530481404" class="btn btn-primary">
+            HABLAR POR WHATSAPP
+          </a>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </section>
+
+  <!-- CTA -->
+
+  <!-- <section class="cta">
+
+    <div class="container">
+
+      <h2>
+        Agenda tu recorrido
+      </h2>
+
+      <p>
+        Conoce las casas muestra, amenidades y modelos disponibles.
+      </p>
+
+      <div class="contact-box">
+
+        <form>
+
+          <div class="form-group">
+            <input type="text" placeholder="Nombre completo">
+          </div>
+
+          <div class="form-group">
+            <input type="tel" placeholder="Número de WhatsApp">
+          </div>
+
+          <div class="form-group">
+            <textarea rows="4" placeholder="¿Qué modelo te interesa?"></textarea>
+          </div>
+
+          <button class="btn btn-primary">
+            QUIERO INFORMACIÓN
+          </button>
+
+        </form>
+
+      </div>
+
+    </div>
+
+  </section> -->
+
+  <!-- FOOTER -->
+
+  <footer>
+    © 2026 Saúl Castañeda · Asesor inmobiliario Andalucía Residencial
   </footer>
-
-  <!-- WhatsApp flotante -->
-  <a href="https://wa.me/525530481404?text=Hola%20Saúl,%20me%20interesa%20una%20casa%20en%20Andalucía%20Residencial%20Tizayuca"
-     class="wa-float" target="_blank" rel="noopener" aria-label="Chatear por WhatsApp con Saúl Castañeda">
-    💬
-  </a>
-
-  <script>
-    function enviarWA() {
-      const nombre = document.getElementById('nombre').value.trim();
-      const tel = document.getElementById('telefono').value.trim();
-      const credito = document.getElementById('credito').value;
-      const proto = document.getElementById('prototipo').value;
-      if (!nombre) { alert('Por favor ingresa tu nombre.'); return; }
-      let msg = `Hola Saúl, me llamo ${nombre} y me interesa una casa en Andalucía Residencial Tizayuca.`;
-      if (credito) msg += ` Mi tipo de crédito es: ${credito}.`;
-      if (proto) msg += ` El modelo que me interesa es: ${proto}.`;
-      if (tel) msg += ` Mi teléfono es: ${tel}.`;
-      window.open(`https://wa.me/525530481404?text=${encodeURIComponent(msg)}`, '_blank');
-    }
-
-    // Intersection Observer para animaciones al hacer scroll
-    const observer = new IntersectionObserver((entries) => {
-      entries.forEach(e => {
-        if (e.isIntersecting) {
-          e.target.style.opacity = '1';
-          e.target.style.transform = 'translateY(0)';
-        }
-      });
-    }, { threshold: 0.1 });
-
-    document.querySelectorAll('.proto-card, .amen-item, .fi-card').forEach(el => {
-      el.style.opacity = '0';
-      el.style.transform = 'translateY(20px)';
-      el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
-      observer.observe(el);
-    });
-  </script>
 
 </body>
 </html>
